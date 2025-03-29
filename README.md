@@ -98,7 +98,7 @@ Dynamics365 MCP server running on stdio...
             "env": {
                 "CLIENT_ID": "<D365 Client Id>",
                 "CLIENT_SECRET": "<D365 Client Secret>",
-                "TENANT_ID": "<D365 Tenant ID",
+                "TENANT_ID": "<D365 Tenant ID>",
                 "D365_URL": "Dynamics 365 url"
             }
         }
