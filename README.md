@@ -93,7 +93,7 @@ Dynamics365 MCP server running on stdio...
         "Dynamics365": {
             "command": "node",
             "args": [
-                "<Path to your MCP server build file ex: rootfolder/build/index.js>}"
+                "<Path to your MCP server build file ex: rootfolder/build/index.js>"
             ],
             "env": {
                 "CLIENT_ID": "<D365 Client Id>",
