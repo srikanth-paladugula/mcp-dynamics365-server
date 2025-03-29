@@ -83,6 +83,34 @@ You should see the following output:
 ```plaintext
 Dynamics365 MCP server running on stdio...
 ```
+### 5. (Optional) Register your MCP Server with Claude Desktop
+- Install [Claude Desktop](https://claude.ai/download)
+- Navigate to Settings > Developer > Edit Config
+- Edit claude_desktop_config.json
+```json
+{
+    "mcpServers": {
+        "Dynamics365": {
+            "command": "node",
+            "args": [
+                "<Path to your MCP server build file ex: rootfolder/build/index.js>}"
+            ],
+            "env": {
+                "CLIENT_ID": "<D365 Client Id>",
+                "CLIENT_SECRET": "<D365 Client Secret>",
+                "TENANT_ID": "<D365 Tenant ID",
+                "D365_URL": "Dynamics 365 url"
+            }
+        }
+    }
+}
+```
+- Restart Claude Desktop 
+- Now you should be able to see the server tools in the prompt window
+![ Claude Server Tools](/images/Claude_Server_Tools_Setup.png)
+
+- Let's test a prompt by invoking tool - get-user-info
+![ Get User Tool Test](/images/get_user_tool_test.png)
 
 ## Debugging 🐛
 
