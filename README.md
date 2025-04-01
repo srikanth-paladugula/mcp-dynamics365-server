@@ -112,6 +112,19 @@ Dynamics365 MCP server running on stdio...
 - Let's test a prompt by invoking tool - get-user-info
 ![ Get User Tool Test](/images/get_user_tool_test.png)
 
+### 6. (Optional) Test tools using MCP Interceptor
+- Run following command in terminal
+```json
+npx @modelcontextprotocol/inspector node build/index.js
+```
+![ Interceptor commange](/images/Interceptor.png)
+
+- Go to 🔍  http://localhost:5173 🚀
+![ Interceptor](/images/Inspector.png)
+
+- Now you can connect to server and terst all the tools!!
+
+
 ## Debugging 🐛
 
 ## If you encounter issues, ensure the following:
