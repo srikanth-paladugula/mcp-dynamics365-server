@@ -19,6 +19,8 @@ export class Dynamics365 {
   private tenantId: string;
   private d365Url: string;
   private msalInstance: ConfidentialClientApplication;
+  private accessToken: string | null = null;
+  private tokenExpiration: number | null = null;
 
   /**
    * @param clientId - Azure AD application client ID
@@ -59,11 +61,19 @@ export class Dynamics365 {
     };
 
     try {
+      // Check if the token is expired or about to expire
+      if (this.tokenExpiration && Date.now() < this.tokenExpiration) {
+        return this.accessToken as string;
+      }
+
       const response = await this.msalInstance.acquireTokenByClientCredential(
         tokenRequest
       );
       if (response && response.accessToken) {
-        return response.accessToken;
+        this.accessToken = response.accessToken;
+        if (response.expiresOn) {
+          this.tokenExpiration = response.expiresOn.getTime() - 3 * 60 * 1000;
+        }
       } else {
         throw new Error(
           "Token acquisition failed: response is null or invalid."
@@ -77,6 +87,7 @@ export class Dynamics365 {
         }`
       );
     }
+    return this.accessToken;
   }
 
   /**
