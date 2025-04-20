@@ -5,6 +5,10 @@
 ![MCP](https://img.shields.io/badge/MCP-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+<a href="https://glama.ai/mcp/servers/@srikanth-paladugula/mcp-dyamics365-server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@srikanth-paladugula/mcp-dyamics365-server/badge" alt="Dynamics 365 Server MCP server" />
+</a>
+
 ## Overview
 
 The **Microsoft Dynamics 365 MCP Server** is a MCP server that provides tools to interact with Microsoft Dynamics 365 using the **Model Context Protocol(MCP)** by Anthorpic. It allows users to perform various operations such as retrieving user information, accounts, opportunities associated with an account, create and update accounts from **Claude Desktop**.
