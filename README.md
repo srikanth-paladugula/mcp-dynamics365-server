@@ -1,3 +1,5 @@
+[![MseeP Badge](https://mseep.net/pr/srikanth-paladugula-mcp-dynamics365-server-badge.jpg)](https://mseep.ai/app/srikanth-paladugula-mcp-dynamics365-server)
+
 # Dynamics 365 MCP Server 🚀
 
 ![Node.js](https://img.shields.io/badge/Node.js-v16%2B-green)
